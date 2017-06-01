@@ -29,5 +29,6 @@ class Element
   def displayed?
     find.displayed?
   end
+  
 end
 

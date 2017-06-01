@@ -3,6 +3,22 @@ class Screens
   def initialize(driver)
     @driver = driver
   end
+
+  def screen_base  
+    @screen_base ||= ScreenBase.new @driver
+    @screen_base
+  end
+
+  def screen_side_menu 
+    @screen_side_menu ||= ScreenSideMenu.new @driver
+    @screen_side_menu
+  end
+
+  def screen_side_categories
+    @screen_side_categories ||= ScreenSideCategories.new @driver
+    @screen_side_categories
+  end
+
   def screen_intro
     @screen_intro_welcome ||= ScreenIntro.new @driver
     @screen_intro_welcome
@@ -14,7 +30,7 @@ class Screens
   end
 
   def screen_select_sub_category
-    @screen_select_sub_category ||= ScreenSelectSubcategory.new @driver
+    @screen_select_sub_category ||= ScreenSelectSubCategory.new @driver
     @screen_select_sub_category
   end
 end

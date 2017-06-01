@@ -1,6 +1,6 @@
 require 'yaml'
 class Filter
-  attr_accessor :name, :category, :sub_categories, :parameters
+  attr_accessor :name, :category, :sub_categories, :parameters, :params
 
   def initialize(type)
     config = YAML.load_file('features/config/filters.yml')[type]
@@ -14,6 +14,7 @@ class Filter
     config['parameters'].each do |parameter|
       @parameters.push parameter
     end
+
   end
 
   def print_properties

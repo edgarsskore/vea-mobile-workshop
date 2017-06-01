@@ -7,9 +7,12 @@ class Tests
     @test_intro ||= TestIntro.new(@screens)
     @test_intro
   end
-
-    def test_add_filter
+   def test_add_filter
     @test_add_filter ||= TestAddFilter.new(@screens)
     @test_add_filter
+  end
+  def test_side_menu
+    @test_side_menu ||= TestSideMenu.new(@screens)
+    @test_side_menu
   end
 end
